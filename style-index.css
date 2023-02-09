@@ -1,0 +1,173 @@
+/* ! General style of the website */
+body{
+  font-family: 'Nunito';
+  font-size: 1.32vw;
+  background-color: #FAFAFC;
+  right: 0;
+  top: 0;
+  padding: 0;
+}
+
+a{ text-decoration: none; cursor: pointer; color: #000074;}
+
+/* Header */
+header{
+  width: 90vw;
+  padding: 2vw 5vw;;
+  display: flex;
+}
+
+header .logo{
+  position: static;
+  padding: 1.1vw 6vw 0.9vw 0;
+  height: 1.45vw;
+}
+
+header .links{
+  display: flex;
+  margin: 0 auto;
+}
+
+header .links h4{
+  color: #000074;
+  font-size: 1.1vw;
+  font-weight: 300;
+  padding-top: 1.3vw;
+  margin: 0 3vw 0.44vw 0;
+}
+
+#selected-page{
+  color: rgb(200, 16, 46);
+  font-weight: 400;
+}
+
+/* Button */
+#header-button button{
+  border: 0.1vw solid #C8102E;
+  color: #C8102E;
+  background-color: rgba(0, 0, 0, 0);
+  width: 9.4vw;
+  height: 3.7vw;
+  cursor: pointer;
+  border-radius: 1.9vw;
+  padding-top: 0.1vw;
+  font-family: 'Nunito';
+  font-size: 1.1vw;
+  font-weight: 600;
+}
+
+#header-button button:hover{
+  background-color: #C8102E;
+  color: #FAFAFC;
+  transition: all 0.14s cubic-bezier(.17, .67, .86, .58);
+}
+
+button:active{
+  transition: all 0.01 cubic-bezier(0.19, 1, 0.22, 1);
+  transform: scale(0.96);
+}
+
+/* Underline animation */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.073vw;
+  bottom: -0.37vw;
+  left: 0;
+  background-color: #C8102E;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Titile */
+.title {
+  width: 100vw;
+  margin-top: 5vw;
+}
+
+.title .line {
+  width: 100%;
+  height: 5vw;
+  display: grid;
+  place-content: center;
+  padding-bottom: 0.8vw;
+}
+
+.title .line h1 {
+  font-size: 5.5vw;
+  font-weight: 700;
+  color: #000074;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  padding-bottom: 0.3vw;
+}
+
+.char {
+  transform: translateY(8.5vw);
+  transition: transform .5s;
+}
+
+
+/* Titile */
+.image-slider{
+  width: 90vw;
+  margin: 5.5vw 5vw;
+  height: 45vw;
+  position: relative;
+}
+
+.image-slider div{
+  background-size: cover;
+  width: 80vw;
+  height: 40vw;
+  margin: auto 5vw;
+  position: absolute;
+  border-radius: 1vw;
+  border: 0.05vw solid #fff;
+}
+
+.image-slider .image-1{
+  background-image: url('resources/img-1.webp');
+  z-index: 3;
+  transform: scale(1) translate(0vw, 5vw);
+}
+
+.image-slider .image-2 {
+  background-image: url('resources/img-2.webp');
+  z-index: 2;
+  transform: scale(0.95) translate(0vw, 2.5vw);
+}
+
+.image-slider .image-3 {
+  background-image: url('resources/img-3.webp');
+  z-index: 1;
+  transform: scale(0.9) translate(0vw, 0vw);
+}
+
+
+/* Footer */
+.footer{ width: 100vw; margin: 15vw 0 3vw 0;}
+.footer img{ width: 7vw; margin: 1.5vw 46.5vw; opacity: 100%;}
+
+.footer p{
+  font-weight: 100;
+  font-size: 1.16vw;
+  width: 100%;
+  line-height: 1.25;
+  padding-top: 0.3vw;
+  text-align: center;
+  letter-spacing: 0.05vw;
+  color: #000075;
+}
