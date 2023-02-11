@@ -234,6 +234,17 @@ button:active{
 #c-3 {background-image: url("resources/card-3.webp");}
 
 
+.horizontal-slider .card h2{
+  color: #FAFAFC;
+  font-size: 1.8vw;
+  font-weight: 400;
+  padding: 4.5vw 0 0 4.5vw;
+  width: 50%;
+  text-align: left;
+  line-height: 1.4;
+}
+
+
 /* Footer */
 .footer{ width: 100vw; margin: 15vw 0 3vw 0;}
 .footer img{ width: 7vw; margin: 1.5vw 46.5vw; opacity: 100%;}
