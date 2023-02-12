@@ -1,4 +1,4 @@
-// smooth scrolling to all .smooth links
+// Smooth scrolling to all .smooth links
 $("a.smooth").on('click', function(event) {
   if (this.hash !== "") {
     event.preventDefault();
@@ -9,6 +9,25 @@ $("a.smooth").on('click', function(event) {
       window.location.hash = hash;
     });
   }
+});
+
+
+// Header-popup
+const link = document.querySelector('#header-popup');
+const popup = document.querySelector('.header-popup');
+
+link.addEventListener('click', function() {
+  popup.style.display = 'block';
+  setTimeout(function() {
+    popup.style.opacity = 1;
+  }, 100);
+});
+
+popup.addEventListener('mouseleave', function() {
+  popup.style.opacity = 0;
+  setTimeout(function() {
+    popup.style.display = 'none';
+  }, 500);
 });
 
 
@@ -28,7 +47,6 @@ gsap. to('.char', {
 
 // GSAP - image slider - pin
 imageSliderPin. to(".image-slider", {
-  delay: 0.15,
   duration: 3,
   scrollTrigger: {
     trigger: ".image-slider",

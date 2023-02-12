@@ -30,6 +30,29 @@ a{ text-decoration: none; cursor: pointer; color: #000074;}
   height: 4vw;
 }
 
+
+/* Header popup */
+.header-popup{
+  position: absolute;
+  display: none;
+  opacity: 0;
+  top: 5vw;
+  left: 56.1vw;
+  border: 0.1vw solid rgba(0, 0, 116, 0.2);
+  border-radius: 0.45vw;
+  z-index: 100;
+  padding: 0.8vw 1.6vw;
+  width: 4vw;
+  transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.header-popup a{
+  font-size: 1.1vw;
+  font-weight: 200;
+  line-height: 2;
+}
+
+
 /* Header */
 header{
   width: 90vw;
@@ -213,10 +236,6 @@ button:active{
   margin: 5vw 0 5vw 5vw;
   width: 95vw;
   white-space: nowrap;
-}
-
-.horizontal-slider-content{
-  display: flex;
 }
 
 .horizontal-slider .card{
