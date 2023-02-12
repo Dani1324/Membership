@@ -172,7 +172,6 @@ andvantagesSliderPin.eventCallback("onComplete", function() {
 
   t2.to(".horizontal-slider", {
     duration: 30,
-    x: "-470vw",
   });
 
   t3.to("#changing-text h2", {
