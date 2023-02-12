@@ -43,13 +43,14 @@ a{ text-decoration: none; cursor: pointer; color: #000074;}
   z-index: 100;
   padding: 0.8vw 1.6vw;
   width: 4vw;
-  transition: all 0.35s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transition: all 0.25s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
-.header-popup a{
+.header-popup a h4{
+  color: #000074;
+  margin: 0.5vw 0;
   font-size: 1.1vw;
   font-weight: 200;
-  line-height: 2;
 }
 
 
