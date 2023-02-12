@@ -197,6 +197,7 @@ button:active{
   z-index: 1;
 }
 
+
 /* Advantages */
 .advantages{
   color: #000074;
@@ -219,18 +220,23 @@ button:active{
   margin: 1vw auto 2vw auto;
 }
 
-.advantages .changing-text{
+.advantages #changing-text{
   border: 0.1vw solid #C8102E;
   color: #C8102E;
   width: max-content;
+  padding: 1.4vw 2vw;
+  height: 1.1vw;
   margin: 0 auto;
-  padding: 1.4vw 2.6vw 1.3vw 2.6vw;
   border-radius: 1.95vw;
+  overflow: hidden;
 }
 
-.advantages .changing-text h2{
+.advantages #changing-text h2{
   font-size: 1.2;
   font-weight: 600;
+  display: grid;
+  place-content: center;
+  margin-bottom: 3vw;
 }
 
 .horizontal-slider{
@@ -241,6 +247,7 @@ button:active{
 
 .horizontal-slider .card{
   display: inline-block;
+  position: relative;
   width: 40vw;
   height: 22.5vw;
   border-radius: 1vw;
@@ -249,19 +256,61 @@ button:active{
   margin: 0 1.2vw;
 }
 
-#c-1{ background-image: url("resources/card-1.webp");}
-#c-2 {background-image: url("resources/card-2.webp");}
-#c-3 {background-image: url("resources/card-3.webp");}
+#c-1 { background-image: url("resources/card-1.webp");}
+#c-2 { background-image: url("resources/card-2.webp");}
+#c-3 { background-image: url("resources/card-3.webp");}
+#c-4 { background-image: url("resources/card-4.webp");}
+#c-5 { background-image: url("resources/card-5.webp");}
+#c-6 { background-image: url("resources/card-6.webp");}
+#c-7 { background-image: url("resources/card-7.webp");}
+#c-8 { background-image: url("resources/card-8.webp");}
+#c-9 { background-image: url("resources/card-9.webp");}
+#c-10 { background-image: url("resources/card-10.webp");}
+#c-11 { background-image: url("resources/card-11.webp");}
+#c-12 { background-image: url("resources/card-12.webp");}
 
 
 .horizontal-slider .card h2{
+  position: absolute;
+  top: 2.5vw;
+  left: 2.5vw;
   color: #FAFAFC;
-  font-size: 1.8vw;
+  font-size: 1.6vw;
   font-weight: 400;
-  padding: 4.5vw 0 0 4.5vw;
   width: 50%;
   text-align: left;
   line-height: 1.4;
+  z-index: 1;
+}
+
+.horizontal-slider .card .filter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  height: 22.5vw;
+  border-radius: 1vw;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.15));
+  z-index: 0;
+}
+
+
+/* Experience */
+.experience{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5vw;
+}
+
+.experience h2{
+  color: #000074;
+  font-size: 4vw;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 
