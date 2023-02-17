@@ -153,6 +153,16 @@ introduction. to("#card-3", {
   },
 });
 
+introduction. to("#card-4", {
+  scrollTrigger: {
+    trigger: "#card-4",
+    start: "100% 82%",
+    end: "100% 20%",
+    pin: true,
+    toggleActions: "repeat none none none",
+  },
+});
+
 
 introduction.eventCallback("onComplete", function() {
 
@@ -171,7 +181,7 @@ introduction.eventCallback("onComplete", function() {
     scrollTrigger: {
       trigger: "#card-2",
       start: "100% 82%",
-      end: "100% 20%",
+      end: "100% ",
       scrub: 4,
     },
   });
@@ -180,6 +190,16 @@ introduction.eventCallback("onComplete", function() {
     ease: Sine.easeInOut,
     scrollTrigger: {
       trigger: "#card-3",
+      start: "100% 82%",
+      end: "100% 20%",
+      scrub: 4,
+    },
+  });
+
+  const t7 = gsap.timeline({
+    ease: Sine.easeInOut,
+    scrollTrigger: {
+      trigger: "#card-4",
       start: "100% 82%",
       end: "100% 20%",
       scrub: 4,
@@ -212,6 +232,15 @@ introduction.eventCallback("onComplete", function() {
 
   t6.to("#card-3 .introduction-content .block", {
     x: "-100vw",
+  });
+
+  t7.to("#card-4 .introduction-content .block", {
+    x: "-100vw",
+  });
+
+  t7.to("#card-4 .introduction-content .block", {
+    delay: 0.05,
+    x: "-200vw",
   });
 
 });
