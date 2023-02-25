@@ -8,38 +8,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Gsap + Split type -->
+    <!-- Gsap + Split type + sliderjs-->
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <!-- Fonts (Montserrat + Nunito) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Altre impostazioni del sito -->
     <title>CRREO | Supercharge your creator career</title>
     <link rel="stylesheet" href="style-index.css">
     <link rel="shortcut icon" type="image/webp" href="resources/favicon.webp">
 
   </head>
-  <body id="body">
-
-    <!-- Top button -->
-    <a href="#header" class="top-button smooth">
-      <img src="resources/arrow.webp">
-    </a>
-    
-    <!-- Header popup -->
-    <div class="header-popup">
-      <a href="https://crreo.co/faq.html"><h4 class="hover-underline-animation">Faq</h4></a>
-      <a href="https://crreo.co/insights.html"><h4 class="hover-underline-animation">Insights</h4></a>
-    </div>
+  <body>
 
     <!-- Header -->
     <header id="header">
-      <a href="#">
-        <img class="logo" src="resources/logo.webp">
+      <a href="#hero" class="smooth">
+        <img class="logo" src="resources/logo.webp" alt="img">
       </a>
       <div class="links">
         <a href="https://crreo.co/index.html">
@@ -54,8 +43,11 @@
         <a href="https://crreo.co/plans.html">
           <h4 class="hover-underline-animation">Plans</h4>
         </a>
-        <a id="header-popup">
-          <h4>Resources</h4>
+        <a href="https://crreo.co/faq.html">
+          <h4 class="hover-underline-animation">Faq</h4>
+        </a>
+        <a href="https://crreo.co/insights.html">
+          <h4 class="hover-underline-animation">Insights</h4>
         </a>
         <a href="https://crreo.co/contact.html">
           <h4 class="hover-underline-animation">Contact</h4>
@@ -64,151 +56,252 @@
           <h4 class="hover-underline-animation">About</h4>
         </a>
       </div>
-      <div id="header-button">
-        <button>
-          <h5>Get started</h5>
-        </button>
-      </div>
+      <button>
+        <h5>Get started</h5>
+        <img src="resources/arrow.webp" alt="img">
+      </button>
     </header>
-    
-    <div class="title">
-      <div class="line">
-        <h1>Get paid by your</h1>
+
+
+    <!-- Hero -->
+    <div class="hero" id="hero">
+      <h1>Get paid by your<br><span>superfans</span></h1>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <img src="resources/card-1.webp" alt="img">
+          <img src="resources/card-2.webp" alt="img">
+          <img src="resources/card-3.webp" alt="img">
+          <img src="resources/card-1.webp" alt="img">
+          <img src="resources/card-2.webp" alt="img">
+          <img src="resources/card-3.webp" alt="img">
+        </div>
       </div>
-      <div class="line">
-        <h1>superfans</h1>
+      <div class="hero-btn">
+        <a href="#membership" class="smooth">
+          <h5>Discover</h5>
+          <img src="resources/arrow.webp" alt="img">
+        </a>
       </div>
     </div>
 
-    <!-- Image slider -->
-    <div class="image-slider">
-      <div class="image-1 fade-in"></div>
-      <div class="image-2 fade-in"></div>
-      <div class="image-3 fade-in"></div>
-    </div>
-
-    <!-- Text-reveal -->
-    <div class="text-reveal">
+    <!-- Value -->
+    <div class="value">
       <h3>Strive for participation, not donations</h3>
-      <h2>Launch a membership program with 10x<br>more value for you and your fans</h2>
-    </div>
-
-    <!-- introduction -->
-    <div class="introduction" id="card-1">
-      <div class="introduction-title">
-        <h3>Make your exclusive content more <span>engaging</span></h3>
-      </div>
-      <div class="introduction-content">
-        <div class="block">
-          <div class="texts">
-            <p>Quickly build <br><span>immersive experiences</span></p>
-          </div>
-          <div class="images" id="c-1"></div>
-        </div>
-        <div class="block">
-          <div class="texts">
-            <p>Use polling to gauge interest<br>in your next creation</span></p>
-          </div>
-          <div class="images" id="c-2"></div>
-        </div>
-        <div class="block">
-          <div class="texts">
-            <p>Boost excitement with<br><span>integrated comments</span><br>and reactions</span></p>
-          </div>
-          <div class="images" id="c-3"></div>
+      <div class="value__content">
+        <h2>Membership program with <span>10x</span> more value</h2>
+        <div class="value__links">
+          <button onclick="value1('1')" id="value-btn-1">
+            <p>Make your content more engaging</p>
+          </button>
+          <button onclick="value1('2')" id="value-btn-2">
+            <p>Build two-way collaboration</p>
+          </button>
+          <button onclick="value1('3')" id="value-btn-3">
+            <p>Make brand sponsors valuable for fans</p>
+          </button>
+          <button onclick="value1('4')" id="value-btn-4">
+            <p>Connect with fans in a whole new way</p>
+          </button>
         </div>
       </div>
-    </div>
-
-    <div class="introduction" id="card-2">
-      <div class="introduction-title">
-        <h3>Build <span>two-way collaboration</span> with your members and among members</span></h3>
-      </div>
-      <div class="introduction-content">
-        <div class="block">
-          <div class="texts">
-            <p>Let your fans work<br>with you in <span>group<br>collaborations</span></p>
+      <div class="value__carousel">
+        <div class="carousel-inner" id="c1">
+          <div class="card">
+            <img src="resources/s1.webp" alt="img">
+            <h5>Quickly build <span>immersive experiences</span></h5>
           </div>
-          <div class="images" id="c-4"></div>
+          <div class="card">
+            <img src="resources/s2.webp" alt="img">
+            <h5>Use polling to gauge interest in your next creation</h5>
+          </div>
+          <div class="card">
+            <img src="resources/s3.webp" alt="img" class="space">
+            <h5>Boost excitement with <span>integrated comments</span> and reactions</h5>
+          </div>
         </div>
-        <div class="block">
-          <div class="texts">
-            <p>Engage directly through<br><span>private DMs</span></p>
+        <div class="carousel-inner" id="c2">
+          <div class="card">
+            <img src="resources/s4.webp" alt="img">
+            <h5>Let your fans work with you in <span>group collaborations</span></h5>
           </div>
-          <div class="images" id="c-5"></div>
+          <div class="card">
+            <img src="resources/s5.webp" alt="img">
+            <h5>Engage directly through <span>private DMs</span></h5>
+          </div>
+          <div class="card">
+            <img src="resources/s6.webp" alt="img">
+            <h5>Ready to discuss with members? Activate <span>voice chat</span></h5>
+          </div>
+          <div class="card">
+            <img src="resources/s7.webp" alt="img" class="space">
+            <h5>Need hard data? Use <span>polling</span> and <span>voting</span> in all interactions</h5>
+          </div>
         </div>
-        <div class="block">
-          <div class="texts">
-            <p>Ready to discuss with<br>members? Activate <span>voice chat</span></p>
+        <div class="carousel-inner" id="c3">
+          <div class="card">
+            <img src="resources/s8.webp" alt="img">
+            <h5>Integrate your <span>partner programs</span></h5>
           </div>
-          <div class="images" id="c-6"></div>
+          <div class="card">
+            <img src="resources/s9.webp" alt="img" class="space">
+            <h5>Offer sponsor <span>deals tailored</span> to your fans’ interests</h5>
+          </div>
         </div>
-        <div class="block">
-          <div class="texts">
-            <p>Need hard data? Use <span>polling</span><br>and <span>voting</span> in all interactions</p>
+        <div class="carousel-inner" id="c4">
+          <div class="card">
+            <img src="resources/s10.webp" alt="img">
+            <h5>Have your members co-organize <span>physical and virtual events</span></h5>
           </div>
-          <div class="images" id="c-7"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="introduction" id="card-3">
-      <div class="introduction-title">
-        <h3>Turn brand sponsorship into <span>real value</span> for fans</h3>
-      </div>
-      <div class="introduction-content">
-        <div class="block">
-          <div class="texts">
-            <p>Integrate your <br><span>partner programs</span></p>
+          <div class="card">
+            <img src="resources/s11.webp" alt="img">
+            <h5>Integrate merchandise tailored to your community</h5>
           </div>
-          <div class="images" id="c-8"></div>
-        </div>
-        <div class="block">
-          <div class="texts">
-            <p>Offer sponsor <span>deals tailored</span> to<br>your fans’ interests</p>
+          <div class="card">
+            <img src="resources/s11.webp" alt="img" class="space">
+            <h5>Include your external apps, webs, and tools</h5>
           </div>
-          <div class="images" id="c-9"></div>
         </div>
       </div>
     </div>
 
-    <div class="introduction" id="card-4">
-      <div class="introduction-title">
-        <h3>Strengthen your community with <span>events</span></h3>
+    <!-- Call to action -->
+    <a class="cta">
+      <h5>Launch your program</h5>
+      <img src="resources/arrow.webp" alt="img">
+    </a>
+
+    <!-- Swiper -->
+    <div class="subtitle">
+      <h2>Create an<span> experience </span>that<br>your fans can’t find anywhere else</h2>
+      <h3>Quickly configure a space that truly fits your niche, style and offering</h3>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="resources/Racing Warrior.webp" alt="img">
+        </div>
+        <div class="swiper-slide">
+          <img src="resources/Yoga with Anna.webp" alt="img">
+        </div>
+        <div class="swiper-slide">
+          <img src="resources/Mr Twist.webp" alt="img">
+        </div>
       </div>
-      <div class="introduction-content">
-        <div class="block">
-          <div class="texts">
-            <p>Have your members<br>co-organize <span>physical and<br>virtual events</span></p>
-          </div>
-          <div class="images" id="c-10"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Call to action -->
+    <a class="cta" id="membership">
+      <h5>Launch your program</h5>
+      <img src="resources/arrow.webp" alt="img">
+    </a>
+
+    <!-- Subscription -->
+    <div class="subtitle">
+      <h2><span>Offer more </span>than a subscription,<br>expect more than a donation</h2>
+      <h3>Generate upfront and continuous funding for the program</h3>
+    </div>
+    <div class="subscription" id="s-1">
+      <img src="resources/membership-1.webp" alt="img">
+      <div class="subscription__texts">
+        <div class="subscription__innerTexts">
+          <h3>Offer membership licenses that have tangible value for fans</h3>
+          <p>They’re like lifetime tickets to the program. They can later be resold or transferred if a member no longer wishes to be a part of the program. You chose how many and at what price you offer.</p>
         </div>
-        <div class="block">
-          <div class="texts">
-            <p>Integrate merchandise<br>tailored to your community</p>
-          </div>
-          <div class="images" id="c-11"></div>
+      </div>
+    </div>
+    <div class="subscription" id="s-2">      
+      <div class="subscription__texts">
+        <div class="subscription__innerTexts">
+          <h3>Or offer a classic monthly subscription with integrated tiers</h3>
+          <p>You can also combine the options, or set up a different program with different benefits for each of the options.</p>
         </div>
-        <div class="block">
-          <div class="texts">
-            <p>Include your external apps,<br>webs, and tools</p>
+      </div>
+      <img src="resources/membership-2.webp" alt="img">
+    </div>
+
+    <!-- Call to action -->
+    <a class="cta">
+      <h5>Launch your program</h5>
+      <img src="resources/arrow.webp" alt="img">
+    </a>
+
+    <!-- Value section 2 -->
+    <div class="value">
+      <div class="value__content">
+        <h2>Pay<span> no commission </span>on your payouts</h2>
+        <div class="value__texts">
+          <div class="block">
+            <h4>Love your monthly statements</h4>
+            <p>CRREO takes a <span>0% cut</span> on payments from your fans. No commission, no waste, no headaches.</p>
           </div>
-          <div class="images" id="c-12"></div>
+          <div class="block">
+            <h4>Plan easily</h4>
+            <p>CRREO offers <span>flat subscription plans</span>. Transparent and predictable subscription fee. 100% free until you reach 50 members. Cancel anytime.</p>
+          </div>
         </div>
       </div>
     </div>
 
 
-    <!-- Footer  -->
-    <div class="footer">
-      <a href="#header" class="smooth">
-        <img src="resources/logo.webp">
-      </a>
-      <p>ⓒ 2022 CRREO</p>
-      <p><a href="privacy.html">Privacy  </a>    |    <a href="cookies.html">  Cookies  </a></p>
+    <!-- Things to love -->
+    <div class="subtitle">
+      <h2>Other things to<span> love</span></h2>
     </div>
+    <div class="other">
+      <div class="block">
+        <div class="card">
+          <img src="resources/other-icon-1.webp" alt="img">
+          <h2>Keep all your copyrights</h2>
+          <p>Retain ownership of all your content and partnerships</p>
+        </div>
+        <div class="card">
+          <img src="resources/other-icon-3.webp" alt="img">
+          <h2>Integrate with other<br>platforms</h2>
+          <p>Integrate with your Discors server, YouTube Channel, Instagram, TikTok, or Twitch accounts</p>
+        </div>
+      </div>
+      <div class="block">
+        <div class="card">
+          <img src="resources/other-icon-2.webp" alt="img">
+          <h2>Supercharge your career with our creator growth tools</h2>
+          <p>Analytics and insights for personalized growth recommendations. Personal coaching and mentorship.</p>
+        </div>
+        <div class="card">
+          <img src="resources/other-icon-4.webp" alt="img">
+          <h2>Your fans remain your fans</h2>
+          <p>CRREO will even try to bring you some new ones</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action -->
+    <a class="cta">
+      <h5>Launch your program</h5>
+      <img src="resources/arrow.webp" alt="img">
+    </a>
+
+    <!-- Curiosity -->
+    <div class="curiosity">
+      <h2>Did you know?</h2>
+      <p>Existing paid-membership programs for content creators attract <span> less than 0.1% </span> of their fans. Fans perceive these programs as low value and treat contributions as donations. As a result, most creators do not generate meaningful revenue through paid programs.</p>
+      <p>With CRREO, creators and their fans can do <span> 10x </span> better.</p>
+    </div>
+    
+    <!-- Disclaimer -->
+    <p class="disclaimer">
+      Important Disclaimer:<br>Restrictions apply to license transfers and resale. A membership license is NOT a security, digital token, or NFT.<br>Membership in a creator program or ownership of a Membership License does not grant any ownership or equity share of the Content Creator’s business, nor any rights to the underlying content or intellectual property included in the Membership Program, nor any rights to set policies or make decisions in the Membership Program, nor any rights to receive any income, dividends, or profits from the Membership Program. Please contact CRREO with any questions.
+    </p>
+
+    <!-- Disclaimer -->
+    <footer>
+      <img src="resources/logo.webp" alt="img">
+      <p>® 2022 CRREO</p>
+      <p><a href="http://crreoco.wwwaz1-ss100.a2hosted.com/privacy.html"> Privacy policy </a> | <a href="http://crreoco.wwwaz1-ss100.a2hosted.com/cookies.html"> Cookies policy </a></p>
+    </footer>
 
     <!-- Link to js file -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 
 </body>
