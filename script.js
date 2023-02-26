@@ -47,8 +47,6 @@ function value1(n) {
 };
 
 
-
-
 // Swiper settings
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",

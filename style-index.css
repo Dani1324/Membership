@@ -142,12 +142,12 @@ header button img{
 }
 
 .animate{
-  animation: slide 15s linear infinite;
+  animation: slide 60s linear infinite;
 }
 
 @keyframes slide{
   0% { transform: translateX(0);}
-  100% { transform: translateX(-103vw);}
+  100% { transform: translateX(-412vw);}
 }
 
 .hero-btn{
