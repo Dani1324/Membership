@@ -1,6 +1,5 @@
 /* ! General style of the website */
-@font-face { font-family: "BlackJack"; src: url("resources/black_jack\ 18.32.16.ttf") format("ttf"),
-}
+@font-face { font-family: "BlackJack"; src: url("resources/black_jack.ttf") format("truetype"),}
 
 body{
   font-family: 'Nunito';
@@ -13,7 +12,7 @@ body{
 }
 
 a{ text-decoration: none; cursor: pointer; color: #000074;}
-button{ font-family: 'Nunito'; cursor: pointer; color: #000074;}
+button{ font-family: 'Nunito'; cursor: pointer; color: #000074; white-space: nowrap;}
 
 
 /* Header */
