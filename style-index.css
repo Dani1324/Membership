@@ -1,5 +1,9 @@
 /* ! General style of the website */
-@font-face { font-family: "BlackJack"; src: url("resources/black_jack.ttf") format("truetype"),}
+@font-face {
+  font-family: "BlackJack";
+  src: url("resources/black_jack.ttf") format("truetype"),
+    url("resources/black_jack.otf") format("opentype");
+}
 
 body{
   font-family: 'Nunito';
