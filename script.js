@@ -64,6 +64,21 @@ function value1(n) {
   document.getElementById(`c${n}`).classList.add(`animate${n}`);
 
   t1.to(".animate1", {
+    x: "0vw",
+    duration: 0,
+  });
+
+  t1.to(".animate2", {
+    x: "0vw",
+    duration: 0,
+  });
+
+  t1.to(".animate3", {
+    x: "0vw",
+    duration: 0,
+  });
+
+  t1.to(".animate1", {
     x: "-33vw",
     scrollTrigger: {
       trigger: ".value__carousel",
