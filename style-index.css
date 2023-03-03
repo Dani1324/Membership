@@ -75,6 +75,7 @@ header button {
   display: flex;
   margin-top: 1vw;
   transform: translateY(-0.05vw);
+  transition: all 0.1s;
 }
 
 header button h5 {
@@ -87,6 +88,11 @@ header button img {
   height: 1.4vw;
   margin-left: 0.4vw;
 }
+
+header button:active {
+  transform: scale(0.99) translateY(-0.03vw);
+}
+
 
 /* Underline animation */
 .hover-underline-animation {
@@ -172,6 +178,7 @@ header button img {
   margin: 3.5vw auto 10vw auto;
   border: none;
   background-color: rgba(0, 0, 0, 0);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .hero-btn a {
@@ -179,7 +186,7 @@ header button img {
 }
 
 .hero-btn h5 {
-  padding-top: 0.2vw;
+  padding-top: 0.25vw;
   font-size: 1.7vw;
   color: #C8102E;
   margin-right: 0.5vw;
@@ -189,6 +196,15 @@ header button img {
   width: 2.2vw;
   transform: rotate(135deg);
 }
+
+.hero-btn:hover {
+  transform: translateY(0.5vw);
+}
+
+.hero-btn:active {
+  transform: scale(0.9) translateY(0.5vw);
+}
+
 
 /* Value */
 .value {
@@ -320,6 +336,7 @@ header button img {
   margin: 4vw 0 11vw 0;
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  transition: all 0.1s;
 }
 
 .cta h5 {
@@ -331,6 +348,14 @@ header button img {
 .cta img {
   width: 2vw;
   padding-left: 0.4vw;
+}
+
+.cta:hover{
+  transform: scale(1.01);
+}
+
+.cta:active {
+  transform: scale(0.99);
 }
 
 
