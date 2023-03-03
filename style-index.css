@@ -563,12 +563,12 @@ header button img {
 
 /* Disclaimer */
 .disclaimer {
-  font-size: 1.1vw;
+  font-size: 1vw;
   font-weight: 100;
   text-align: center;
   width: 64vw;
   margin: 7vw 18vw 7vw 18vw;
-  line-height: 1.6;
+  line-height: 1.5;
   opacity: 0.5;
 }
 
