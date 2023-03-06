@@ -197,7 +197,7 @@ if (width < 1025) {
 }
 else{
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
+    slidesPerView: "1.67",
     centeredSlides: true,
     spaceBetween: 200,
     pagination: {
