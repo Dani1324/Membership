@@ -186,7 +186,7 @@ function value1(n) {
 
 if (width < 1025) {
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
+    slidesPerView: 1.4,
     centeredSlides: true,
     spaceBetween: (width/8.5),
     pagination: {
