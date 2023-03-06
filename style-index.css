@@ -657,7 +657,7 @@ footer p {
     background-image: url('resources/close.svg');
     width: 4.7vw;
     margin: 0.8vw 0.75vw;
-    transition: all 0.13s;
+    transition: all 0s;
   }
 
 
