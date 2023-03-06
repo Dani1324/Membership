@@ -233,3 +233,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
   });
 });
+
+
+// Lazy loading
+function lazyLoad() {
+    const images = document.querySelectorAll('img[data-src]');
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    function onIntersection(entries) {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+          const image = entry.target;
+          image.src = image.dataset.src;
+          observer.unobserve(image);
+        }
+      });
+    }
+
+    const observer = new IntersectionObserver(onIntersection, options);
+
+    images.forEach(image => {
+      observer.observe(image);
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', lazyLoad);
