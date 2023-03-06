@@ -742,7 +742,7 @@ footer p {
 
   .carousel {
     margin-top: 8vh;
-    height: 22vh;
+    height: 48vw;
   }
 
   .carousel .carousel-inner {
@@ -753,9 +753,18 @@ footer p {
   .carousel .carousel-inner img {
     margin: 0 2vw;
   }
+ .animate {
+    animation: slide 40s linear infinite;
+  }
 
-  .animate {
-    animation: slide 35s linear infinite;
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-1086.4vw);
+    }
   }
 
   .hero-btn {

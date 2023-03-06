@@ -183,7 +183,6 @@ function value1(n) {
 
 
 // Swiper settings
-
 if (width < 1025) {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1.4,
