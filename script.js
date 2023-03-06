@@ -237,28 +237,49 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Lazy loading
 function lazyLoad() {
-    const images = document.querySelectorAll('img[data-src]');
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
+  const images = document.querySelectorAll('img[data-src]');
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+  const imageCount = images.length;
+  let loadedCount = 0;
 
-    function onIntersection(entries) {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-          const image = entry.target;
-          image.src = image.dataset.src;
-          observer.unobserve(image);
-        }
-      });
-    }
-
-    const observer = new IntersectionObserver(onIntersection, options);
-
-    images.forEach(image => {
-      observer.observe(image);
+  function onIntersection(entries) {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0 && loadedCount < imageCount) {
+        const image = entry.target;
+        image.src = image.dataset.src;
+        observer.unobserve(image);
+        loadedCount++;
+      }
     });
   }
 
-  window.addEventListener('DOMContentLoaded', lazyLoad);
+  const observer = new IntersectionObserver(onIntersection, options);
+
+  // Separare le immagini presenti nella schermata dall'utente dalle altre
+  const visibleImages = [];
+  const hiddenImages = [];
+  images.forEach(image => {
+    const rect = image.getBoundingClientRect();
+    if ((rect.top >= 0 && rect.top <= window.innerHeight) || (rect.bottom >= 0 && rect.bottom <= window.innerHeight)) {
+      visibleImages.push(image);
+    } else {
+      hiddenImages.push(image);
+    }
+  });
+
+  // Caricare prima le immagini presenti nella schermata e poi le altre
+  visibleImages.forEach(image => {
+    image.src = image.dataset.src;
+    loadedCount++;
+  });
+
+  hiddenImages.forEach(image => {
+    observer.observe(image);
+  });
+}
+
+window.addEventListener('DOMContentLoaded', lazyLoad);
