@@ -657,7 +657,7 @@ footer p {
     background-image: url('resources/close.svg');
     width: 4.7vw;
     margin: 0.8vw 0.75vw;
-    transition: all 0.1s;
+    transition: all 0.13s;
   }
 
 
@@ -983,9 +983,10 @@ footer p {
     display: block !important;
   }
 
-  /* Value */
+  /* Value section 2 */
   .value__texts {
     margin-top: 8vw;
+    padding-bottom: 4vw;
     width: 88vw;
   }
 
