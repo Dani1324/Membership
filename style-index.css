@@ -409,6 +409,7 @@ button {
   justify-content: center;
   align-items: center;
   transition: all 1s;
+  border-radius: 1vw;
 }
 
 .swiper-slide-active {
