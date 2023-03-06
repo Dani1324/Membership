@@ -104,7 +104,7 @@ function value1(n) {
         trigger: ".value__carousel",
         start: "20% 60%",
         end: "20% 20%",
-        scrub: 1,
+        scrub: 2,
       },
     });
 
@@ -114,7 +114,7 @@ function value1(n) {
         trigger: ".value__carousel",
         start: "20% 60%",
         end: "20% 20%",
-        scrub: 2,
+        scrub: 3,
       },
     });
 
@@ -124,7 +124,7 @@ function value1(n) {
         trigger: ".value__carousel",
         start: "20% 60%",
         end: "20% 20%",
-        scrub: 1,
+        scrub: 2,
       },
     });
 
@@ -134,7 +134,7 @@ function value1(n) {
         trigger: ".value__carousel",
         start: "20% 60%",
         end: "20% 20%",
-        scrub: 1,
+        scrub: 2,
       },
     });
   }
